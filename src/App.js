@@ -2,9 +2,9 @@ import { Button, Container, Stack } from "react-bootstrap";
 import AddBudgetModal from "./components/AddBudgetModal";
 import AddExpenseModal from "./components/AddExpenseModal";
 import BudgetCard from "./components/BudgetCard";
+import UncategorizedBudgetCard from "./components/UncategorizedBudgetCard";
 import { useState } from "react";
 import { useBudgets } from "./contexts/BudgetsContext";
-
 
 
 function App() {
@@ -39,6 +39,7 @@ function openAddExpenseModal(budgetId) {
               />
             )
           })}
+          <UncategorizedBudgetCard />
         </div>
       </Container>
       <AddBudgetModal show={showAddBudgetModal} handleClose={() => setShowAddBudgetModal(false)} />
